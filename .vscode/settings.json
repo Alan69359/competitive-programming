@@ -1,0 +1,7 @@
+{
+    "files.associations": {
+        "barrier": "cpp",
+        "*.tcc": "cpp",
+        "vector": "cpp"
+    }
+}
