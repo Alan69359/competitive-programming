@@ -9,6 +9,7 @@ const int N=1e5+10,M=1e5+10,INF=0x3f3f3f3f,MOD=1e9+7;
 
 int a[N][N];
 ll factorial[N],infactorial[N];
+int p;
 
 ll fastexp(int a,int n,int p){
     ll res=1;
@@ -63,8 +64,11 @@ void f2(){
     printf("%d",factorial[n]*infactorial[r]*infactorial[n-r]);
 }
 
-ll lucas(){
-
+ll lucas(ll a,ll b){
+    if(a<p&&b<p){
+        return C(a,b);
+    }
+    else return C(a%p,b%p)*lucas(a/p,b/p);
 }
 
 void f3(){
