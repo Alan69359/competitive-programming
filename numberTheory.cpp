@@ -9,10 +9,22 @@ const int N=110,M=100001,INF=0x3f3f3f3f,MOD=1e9+7;
 
 int n;
 int phi[N][N];
-int p[N];
+int p[N],co;
 int p2[N][2];
 int p3[N];
 bool st[N];
+
+void linearsieve(int n) {
+	for(int i=2;i<=n;i++){
+        if(!st[i]){
+            p[co++]=i;
+        }
+		for(int j=0;p[j]*i<=n;j++){
+			st[i*p[j]]=true;
+			if(i%p[j]==0)break;
+		}
+	}
+}
 
 void primefactorization(int x){
     int j=0;
@@ -45,17 +57,6 @@ void primefactorization2(int n){
 		p2[j][0]=prime,p2[j][1]=count;
         j++;
     }
-}
-
-void linearsieve(int n) {
-	int co=0;
-	for(int i=2;i<=n;i++){
-		if(!st[i])p[co++]=i;
-		for(int j=0;p[j]*i<=n;j++){
-			st[i*p[j]]=true;
-			if(i%p[j]==0)break;
-		}
-	}
 }
 
 int phifun1(int x){
@@ -115,13 +116,13 @@ ll slowmul(ll a,ll n,ll p){
     return ans;
 }
 
-ll lcm(int a,int b){
-	return (ll)a*b/gcd(a,b);
-}
-
 int gcd(int a,int b){
 	if(!b)return a;
 	else return gcd(b,a%b);
+}
+
+ll lcm(int a,int b){
+	return (ll)a*b/gcd(a,b);
 }
 
 int exgcd(int a,int b,int &x,int &y){
