@@ -93,4 +93,5 @@
 > > </ul>
 > >
 > > * #### CDQ divide and conquer 陈丹琦分治
+> > * #### Simulated annealing 模拟退火
 > > * #### to be continued...
