@@ -14,7 +14,7 @@ double e[N][N];
 
 int gaussian(){
 	int r,c;
-	for(c=0,r=0;c<n;c++,r++){
+	for(c=0,r=0;c<n;c++){
 		int tr=r;
 		for(int i=r+1;i<n;i++){
 			if(fabs(e[i][c])>fabs(e[tr][c]))tr=i;
@@ -33,6 +33,7 @@ int gaussian(){
 				}
 			}
 		}
+        r++;
 	}
 	if(r<n){
 		for(int i=r;i<n;i++){
