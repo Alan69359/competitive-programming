@@ -15,15 +15,15 @@ int pp1[N][2],pp2[N][2],pp3[N][2];
 int sum[N];
 
 ll fastexp(ll a,ll n,ll p){
-    ll res=1;
+    ll ans=1;
     while(n){
         if(n&1){
-            res=res*a%p;
+            ans=ans*a%p;
         }
         n>>=1;
         a=(ll)a*a%p;
     }
-    return res;		
+    return ans;		
 }
 
 void init1(){
@@ -68,6 +68,7 @@ void f2(){
 }
 
 ll C2(int n,int r){
+    if(n<r)return 0;
     ll ans=1;
     for(int i=1,j=n;i<=r;i++,j--){
         ans=ans*j%mod*fastexp(i,mod-2,mod)%mod;
@@ -149,15 +150,15 @@ void f4(){
         int prime=p[i];
         sum[i]=pp1[][1]-pp2[][1]-pp3[][1];
     }
-    vector<int>ans;
-    ans.push_back(1);
+    vector<int>res;
+    res.push_back(1);
     for(int i=0;i<co;i++){
         for(int j=0;j<sum[i];j++){
             res=multi(res,p[i]);
         }
     }
-    for(int i=ans.size()-1;i>=0;i--){
-        printf("%d",ans[i]);
+    for(int i=res.size()-1;i>=0;i--){
+        printf("%d",res[i]);
     }
 }
 
