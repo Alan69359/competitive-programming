@@ -80,6 +80,7 @@
 > > * #### Bowyer-Watson algorithm
 > > ## Mathematic 数学
 > > * #### Fast Fourier transform 快速傅里叶变换 
+> > * #### 二项式反演
 > > * #### Number-theoretic transform 数论变换 
 > > ## Other 其他
 > > <ul>
