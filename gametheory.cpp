@@ -53,7 +53,7 @@ int sg(int x){
 
 int nim3(){
     scanf("%d",&m);
-    for(int i=1;i<=m;i++){
+    for(int i=0;i<m;i++){
         scanf("%d",&set0[i]);
     }
     scanf("%d",&n);
