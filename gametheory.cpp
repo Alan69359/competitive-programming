@@ -20,10 +20,22 @@ int nim1(){
     }
     if(res)return 0;
     else return 1;
+}
+
+int nim2(){
+    scanf("%d",&n);
+    int res=0;
+    while(n--){
+        int a;
+        scanf("%d",&a);
+        if(n&1)res^=a;
     }
+    if(res)return 0;
+    else return 1;
+}
 
 int main(){
-    int res=nim1();
+    int res=nim2();
     if(res==0)printf("Yes");
     else printf("No");
 }
