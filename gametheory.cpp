@@ -69,7 +69,7 @@ int nim3(){
 }
 
 int main(){
-    int res=nim2();
+    int res=nim3();
     if(res==0)printf("Yes");
     else printf("No");
 }
