@@ -25,10 +25,10 @@ int nim1(){
 int nim2(){
     scanf("%d",&n);
     int res=0;
-    while(n--){
+    for(int i=1;i<=n;i++){
         int a;
         scanf("%d",&a);
-        if(n&1)res^=a;
+        if(i&1)res^=a;
     }
     if(res)return 0;
     else return 1;
