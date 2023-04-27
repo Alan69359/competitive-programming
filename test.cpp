@@ -2,62 +2,40 @@
 
 using namespace std;
 
-const int N=20,MOD=1e9+7;
+const int N=55,M=5e4+50;
 
-typedef long long ll;
+int f[N][M];
 
-ll arr[N];
-ll denominator=1;
-
-ll fastexp(ll a,ll n,ll p){
-    ll ans=1;
-    while(n){
-        if(n&1)ans=ans*a%p;
-        n>>=1;
-        a=a*a%p;
-    }
-    return ans;
-}
-
-void getdenominator(ll n){
-    for(ll j=1;j<=n-1;j++){
-        denominator=denominator*j%MOD;
-    }
-    denominator=fastexp(denominator,MOD-2,MOD)%MOD;
-}
-
-ll C(ll n,ll r){
-    if(n<r)return 0;
-    /*ll ans=1;*/
-    /*for(ll i=1,j=n;i<=r;i++,j--){*/
-    /*ans=ans*j%MOD*fastexp(i,MOD-2,MOD)%MOD;*/
-    /*}*/
-    /*return ans;*/
-    ll nominator=1;
-    for(ll i=n;i>n-r;i--){
-        nominator=nominator*i%MOD;
-    }
-    return nominator*denominator%MOD;
+int dp(int a,int b){
+    int &f1=f[a][b];
+    if(f1!=-1)return f1;
+    if(!a)return f1=!(b%2);
+    if(b==1)return dp(a+1,0);
+    if(a&&dp(a-1,b))return f1=0;
+    if(b&&dp(a,b-1))return f1=0;
+    if(a>=2&&dp(a-2,b+(b?3:2)))return f1=0;
+    if(a&&b&&dp(a-1,b+1))return f1=0;
+    return f1=1;
 }
 
 int main(){
-    ll n,m;
-    scanf("%lld%lld",&n,&m);
-    for(ll i=0;i<n;i++){
-        scanf("%lld",&arr[i]);
-    }
-    getdenominator(n);
-    ll ans=0;
-    for(int i=0;i<1<<n;i++){
-        ll a=m+n-1,b=n-1;
-        int sign=1;
-        for(ll j=0;j<n;j++){
-            if(i>>j&1){
-                sign*=-1;
-                a-=arr[j]+1;
+    memset(f,-1,sizeof f);
+    int t;
+    scanf("%d",&t);
+    while(t--){
+        int n;
+        scanf("%d",&n);
+        int a=0,b=0;
+        for(int i=0;i<n;i++){
+            int x;
+            scanf("%d",&x);
+            if(x==1)a++;
+            else {
+                if(!b)b+=x;
+                else b+=x+1;
             }
         }
-        ans=ans%MOD+sign*C(a%MOD,b)%MOD;
+        if(dp(a,b)==0)printf("YES\n");
+        else printf("NO\n");
     }
-    printf("%lld",(ans+MOD)%MOD);
 }
