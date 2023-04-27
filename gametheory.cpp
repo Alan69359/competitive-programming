@@ -35,13 +35,14 @@ int nim2(){
     else return 1;
 }
 
-int sg(int x){
+int sg1(int x){
     if(f[x]!=-1)return f[x];
     unordered_set<int>s;
     for(int i=0;i<m;i++){
         int co=set0[i];
         if(x>=co){
-            s.insert(sg(x-co));
+            //nim3
+            s.insert(sg1(x-co));
         }
     }
     for(int i=0;;i++){
@@ -62,14 +63,42 @@ int nim3(){
     for(int i=0;i<n;i++){
         int a;
         scanf("%d",&a);
-        res^=sg(a);
+        res^=sg1(a);
+    }
+    if(res)return 0;
+    else return 1;
+}
+
+int sg2(int x){
+    if(f[x]!=-1)return f[x];
+    unordered_set<int>s;
+    for(int i=0;i<x;i++){
+        for(int j=0;j<=i;j++){
+            s.insert(sg2(i)^sg2(j));
+        }
+    }
+    for(int i=0;;i++){
+        if(!s.count(i)){
+            return f[x]=i;
+        }
+    }
+}
+
+int nim4(){
+    scanf("%d",&n);
+    memset(f,-1,sizeof f);
+    int res=0;
+    for(int i=0;i<n;i++){
+        int a;
+        scanf("%d",&a);
+        res^=sg2(a);
     }
     if(res)return 0;
     else return 1;
 }
 
 int main(){
-    int res=nim3();
+    int res=nim4();
     if(res==0)printf("Yes");
     else printf("No");
 }
