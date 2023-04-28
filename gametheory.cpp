@@ -125,6 +125,48 @@ int nim5(){
     return dp1(a,b);
 }
 
+int nim6(){
+    int n;
+int a[N];
+int l[N][N],r[N][N];
+
+int main(){
+    int t;
+    scanf("%d",&t);
+    while(t--){
+        scanf("%d",&n);
+        for(int i=1;i<=n;i++){
+            scanf("%d",&a[i]);
+        }
+        for(int len=1;len<=n;len++){
+            for(int i=1;i+len-1<=n;i++){
+                int j=len+i-1;
+                if(len==1){
+                    l[i][j]=r[i][j]=a[i];
+                }
+                else {
+                    int le=l[i][j-1],ri=r[i][j-1];
+                    int x=a[j];
+                    if(ri==x)l[i][j]=0;
+                    else if((x<le&&x<ri)||(x>le&&x>ri))l[i][j]=x;
+                    else if(le>ri)l[i][j]=x-1;
+                    else l[i][j]=x+1;
+                    
+                    le=l[i+1][j],ri=r[i+1][j];
+                    x=a[i];
+                    if(le==x)r[i][j]=0;
+                    else if((x<le&&x<ri)||(x>le&&x>ri))r[i][j]=x;
+                    else if(ri>le)r[i][j]=x-1;
+                    else r[i][j]=x+1;
+                }
+            }
+        }
+        if(n==1)printf("1\n");
+        else printf("%d\n",l[2][n]!=a[1]);
+    }
+}
+}
+
 int main(){
     int t;
     scanf("%d",&t);
