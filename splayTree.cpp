@@ -17,7 +17,7 @@ struct Node{
 	int size;
     int sum;
     int isrotate,isreverse;
-	void ini(int v1,int p1,int id1){
+	void ini(int p1,int v1,int id1){
 		p=p1,v=v1,id=id1;
 		size=1;
         sum=0;
@@ -88,7 +88,7 @@ void ins(int id,int x,int node_id){
 	if(fa){
 		tr[fa].s[(x>tr[fa].v)]=p;
 	}
-	tr[p].ini(x,fa,node_id);
+	tr[p].ini(fa,x,node_id);
 	splay(id,p,0);
 }
 
