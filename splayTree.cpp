@@ -9,7 +9,7 @@ const int N=1e6+10,M=1e6,INF=0x3f3f3f3f,MOD=1e9+7;
 
 int n,m;
 int root,idx;
-int p[N];
+int pa[N];
 int root2[N];
 
 struct Node{
@@ -145,8 +145,8 @@ void rem(int id,int x){
 }
 
 int find(int x){
-    if(p[x]==x)return x;
-    else return p[x]=find(p[x]);
+    if(pa[x]==x)return x;
+    else return pa[x]=find(pa[x]);
 }
 
 void dfs(int u,int id){
@@ -166,7 +166,7 @@ void mer(int id1,int id2){
             swap(a,b);
         }
         dfs(root2[a],b);
-        p[a]=b;
+        pa[a]=b;
     }
 }
 
