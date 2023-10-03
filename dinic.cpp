@@ -57,6 +57,13 @@ int dinic(){
 	return res;		
 }
 
+void backtrack(){
+    for(int i=0;i<idx;i+=2){
+        f[i]+=f[i^1];
+        f[i^1]=0;
+    }
+}
+
 int main(){
 	scanf("%d%d%d%d",&n,&m,&s,&t);
 	memset(he,-1,sizeof he);
