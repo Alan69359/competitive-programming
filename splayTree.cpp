@@ -10,7 +10,7 @@ const int N=1e6+10,M=1e6,INF=0x3f3f3f3f,MOD=1e9+7;
 int n,m;
 int root,idx;
 int pa[N];
-int root2[N];
+int ro[N];
 
 struct Node{
 	int s[2],p,v,id;
@@ -68,7 +68,7 @@ void splay(int id,int x,int k){
 	}
     if(!k){
 //      root=x;
-        root2[id]=x;
+        ro[id]=x;
     }
 }
 
@@ -78,7 +78,7 @@ void build(int l,int r,int fa){
 
 void ins(int id,int x,int node_id){
 //	int p=root;
-    int p=root2[id];
+    int p=ro[id];
     int fa=0;
 	while(p){
 		fa=p;
@@ -95,8 +95,8 @@ void ins(int id,int x,int node_id){
 void search(int id,int x){
 //  if(!root)return;
 //  int p=root;
-    if(!root2[id])return;
-    int p=root2[id];
+    if(!ro[id])return;
+    int p=ro[id];
     while(tr[p].s[(x>tr[p].v)]&&tr[p].v!=x){
         p=tr[p].s[(x>tr[p].v)];
     }
@@ -107,7 +107,7 @@ int getpreviousnode(int id,int x){
     int isleft=0;
     search(id,x);
 //  int p=root;
-    int p=root2[id];
+    int p=ro[id];
     if(tr[p].v<x&&!isleft)return p;
     p=tr[p].s[isleft];
     while(tr[p].s[isleft^1]){
@@ -120,7 +120,7 @@ int getnextnode(int id,int x){
     int isleft=1;
     search(id,x);
 //  int p=root;
-    int p=root2[id];
+    int p=ro[id];
     if(tr[p].v>x&&isleft)return p;
     p=tr[p].s[isleft];
     while(tr[p].s[isleft^1]){
@@ -162,17 +162,17 @@ void dfs(int u,int id){
 void mer(int id1,int id2){
     int a=find(id1),b=find(id2);
     if(a!=b){
-        if(tr[root2[a]].size>tr[root2[b]].size){
+        if(tr[ro[a]].size>tr[ro[b]].size){
             swap(a,b);
         }
-        dfs(root2[a],b);
+        dfs(ro[a],b);
         pa[a]=b;
     }
 }
 
 int getknum(int id,int k){
 //	int p=root;
-    int p=root2[id];
+    int p=ro[id];
 	while(p){
 		if(tr[tr[p].s[0]].size>=k){
 			p=tr[p].s[0];
