@@ -39,15 +39,15 @@ void pushup(int u){
 
 int build(int l,int r,int dimension){
     if(l>r)return 0;
-    int m=(l+r)>>1;
+    int mid=(l+r)>>1;
     k=dimension;
-    int median=nth_element(tr+l,tr+m,tr+r+1);
-    tr[m].l=build(l,m-1,k^1);
-    tr[m].r=build(m+1,r,k^1);
-    pushup(m);
-    return m;
+    int median=nth_element(tr+l,tr+mid,tr+r+1);
+    tr[mid].l=build(l,mid-1,k^1);
+    tr[mid].r=build(mid+1,r,k^1);
+    pushup(mid);
+    return mid;
 }
 
 int main(){
-
+    return 0;
 }
