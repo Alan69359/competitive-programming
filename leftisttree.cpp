@@ -8,7 +8,7 @@ typedef pair<int, int>pii;
 const int N=200001;
 
 int n;
-int we[N],dist[N],le[N],ri[N],idx;
+int we[N],di[N],le[N],ri[N],idx;
 int pa[N];
 
 bool cmp(int x,int y){
@@ -25,8 +25,8 @@ int merge(int x, int y){
 	if(!x||!y)return x+y;
 	if(cmp(y,x))swap(x,y);
 	ri[x]=merge(ri[x],y);
-	if(dist[ri[x]]>dist[le[x]])swap(le[x],ri[x]);
-	dist[x]=dist[ri[x]]+1;
+	if(di[ri[x]]>di[le[x]])swap(le[x],ri[x]);
+	di[x]=di[ri[x]]+1;
 	return x;
 }
 
@@ -38,7 +38,7 @@ int main(){
 		scanf("%d%d",&t,&x);
 		if(t==1){
 			we[++idx]=x;
-			dist[idx]=1;
+			di[idx]=1;
 			pa[idx]=idx;
 		}
 		else if(t==2){

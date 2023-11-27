@@ -8,23 +8,23 @@ int n,m;
 
 struct Node{
     int s[2],p,w;
-    int sum,lazy;
+    int sum,isreverse;
 }tr[N];
 
 int s[N];
 
 void pushrev(int u){
     swap(tr[u].s[0],tr[u].s[1]);
-    tr[u].lazy^=1;
+    tr[u].isreverse^=1;
 }
 void pushup(int u){
     tr[u].sum=tr[tr[u].s[0]].sum^tr[u].w^tr[tr[u].s[1]].sum;
 }
 
 void pushdown(int u){
-    if(tr[u].lazy){
+    if(tr[u].isreverse){
         pushrev(tr[u].s[0]),pushrev(tr[u].s[1]);
-        tr[u].lazy=0;
+        tr[u].isreverse=0;
     }
 }
 

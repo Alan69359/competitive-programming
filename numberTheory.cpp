@@ -28,15 +28,14 @@ void linearsieve(int n) {
 
 void primefactorization(int x){
     int j=0;
-    for(int i=0;i<co;i++){
-        int prime=p[i];
-		if(x%prime==0){
-			int count=0;
+	for(int i=2;i<=x/i;i++){
+		if(x%i==0){
+			int co=0;
 			while(x%i==0){
 				x/=i;
-				count++;
+				co++;
 			}
-			p2[j][0]=i,p2[j][1]=count;
+			p2[j][0]=i,p2[j][1]=co;
             j++;
 		}
 	}

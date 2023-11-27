@@ -8,7 +8,7 @@ typedef pair<int,int>pii;
 const int N=100001,M=1e5+10,INF=0x3f3f3f3f,MOD=1e9+7;
 
 int n,m,p;
-int a[N];
+int ar[N];
 
 struct Node {
     int l,r;
@@ -38,7 +38,7 @@ void pushdown(int u){
 
 void build(int u,int l,int r){
     if(l==r) {
-        tr[u]={l,r,a[l],0,1};
+        tr[u]={l,r,ar[l],0,1};
     }
     else{
         tr[u]={l,r,0,0,1};
@@ -104,7 +104,7 @@ void mul(int u,int l,int r,int v){
 int main(){
     scanf("%d%d",&n,&p);
     for(int i=1;i<=n;i++){
-        scanf("%d",&a[i]);
+        scanf("%d",&ar[i]);
     }
     build(1,1,n);
     scanf("%d",&m);
