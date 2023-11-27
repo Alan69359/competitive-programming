@@ -1,0 +1,122 @@
+
+
+times in msec
+ clock   self+sourced   self:  sourced script
+ clock   elapsed:              other lines
+
+000.000  000.000: --- VIM STARTING ---
+000.000  000.000: Allocated generic buffers
+003.000  003.000: locale set
+003.000  000.000: clipboard setup
+003.000  000.000: window checked
+004.000  001.000: inits 1
+011.000  007.000: parsing arguments
+011.000  000.000: expanding arguments
+013.000  002.000: shell init
+013.000  000.000: Termcap init
+014.000  001.000: inits 2
+014.000  000.000: init highlight
+028.000  001.000  001.000: sourcing C:\Program Files (x86)\Vim\vim90\ftoff.vim
+031.000  000.000  000.000: sourcing C:\Users\Alan6\vimfiles\bundle\Vundle.vim\autoload\vundle.vim
+033.000  000.000  000.000: sourcing C:\Users\Alan6\vimfiles\bundle\Vundle.vim\autoload\vundle\config.vim
+055.000  000.000  000.000: sourcing C:\Users\Alan6\vimfiles\bundle\ultisnips\ftdetect\snippets.vim
+059.000  020.000  020.000: sourcing C:\Program Files (x86)\Vim\vim90\filetype.vim
+065.000  001.000  001.000: sourcing C:\Program Files (x86)\Vim\vim90\ftplugin.vim
+070.000  000.000  000.000: sourcing C:\Program Files (x86)\Vim\vim90\indent.vim
+085.000  002.000  002.000: sourcing C:\Program Files (x86)\Vim\vim90\colors\lists\default.vim
+088.000  008.000  006.000: sourcing C:\Program Files (x86)\Vim\vim90\syntax\syncolor.vim
+091.000  015.000  007.000: sourcing C:\Program Files (x86)\Vim\vim90\syntax\synload.vim
+091.000  018.000  003.000: sourcing C:\Program Files (x86)\Vim\vim90\syntax\syntax.vim
+108.000  002.000  002.000: sourcing C:\Program Files (x86)\Vim\vim90\colors\lists\default.vim
+118.000  000.000  000.000: sourcing C:\Program Files (x86)\Vim\vim90\syntax\syncolor.vim
+127.000  000.000  000.000: sourcing C:\Program Files (x86)\Vim\vim90\syntax\syncolor.vim
+135.000  000.000  000.000: sourcing C:\Users\Alan6\vimfiles\bundle\doki-theme-vim\autoload\emilia_dark.vim
+152.000  038.000  038.000: sourcing C:\Users\Alan6\vimfiles\bundle\doki-theme-vim\colors\emilia_dark.vim
+163.000  148.000  068.000: sourcing $HOME\_vimrc
+163.000  001.000: sourcing vimrc file(s)
+167.000  001.000  001.000: sourcing C:\Users\Alan6\vimfiles\bundle\auto-pairs\plugin\auto-pairs.vim
+172.000  000.000  000.000: sourcing C:\Users\Alan6\vimfiles\bundle\nerdtree\autoload\nerdtree.vim
+175.000  001.000  001.000: sourcing C:\Users\Alan6\vimfiles\bundle\nerdtree\lib\nerdtree\path.vim
+177.000  001.000  001.000: sourcing C:\Users\Alan6\vimfiles\bundle\nerdtree\lib\nerdtree\menu_controller.vim
+178.000  000.000  000.000: sourcing C:\Users\Alan6\vimfiles\bundle\nerdtree\lib\nerdtree\menu_item.vim
+180.000  000.000  000.000: sourcing C:\Users\Alan6\vimfiles\bundle\nerdtree\lib\nerdtree\key_map.vim
+185.000  000.000  000.000: sourcing C:\Users\Alan6\vimfiles\bundle\nerdtree\lib\nerdtree\bookmark.vim
+187.000  000.000  000.000: sourcing C:\Users\Alan6\vimfiles\bundle\nerdtree\lib\nerdtree\tree_file_node.vim
+190.000  001.000  001.000: sourcing C:\Users\Alan6\vimfiles\bundle\nerdtree\lib\nerdtree\tree_dir_node.vim
+192.000  001.000  001.000: sourcing C:\Users\Alan6\vimfiles\bundle\nerdtree\lib\nerdtree\opener.vim
+193.000  000.000  000.000: sourcing C:\Users\Alan6\vimfiles\bundle\nerdtree\lib\nerdtree\creator.vim
+195.000  000.000  000.000: sourcing C:\Users\Alan6\vimfiles\bundle\nerdtree\lib\nerdtree\flag_set.vim
+197.000  001.000  001.000: sourcing C:\Users\Alan6\vimfiles\bundle\nerdtree\lib\nerdtree\nerdtree.vim
+201.000  002.000  002.000: sourcing C:\Users\Alan6\vimfiles\bundle\nerdtree\lib\nerdtree\ui.vim
+203.000  000.000  000.000: sourcing C:\Users\Alan6\vimfiles\bundle\nerdtree\lib\nerdtree\event.vim
+204.000  000.000  000.000: sourcing C:\Users\Alan6\vimfiles\bundle\nerdtree\lib\nerdtree\notifier.vim
+206.000  001.000  001.000: sourcing C:\Users\Alan6\vimfiles\bundle\nerdtree\autoload\nerdtree\ui_glue.vim
+210.000  000.000  000.000: sourcing C:\Users\Alan6\vimfiles\bundle\nerdtree\nerdtree_plugin\exec_menuitem.vim
+217.000  006.000  006.000: sourcing C:\Users\Alan6\vimfiles\bundle\nerdtree\nerdtree_plugin\fs_menu.vim
+218.000  000.000  000.000: sourcing C:\Users\Alan6\vimfiles\bundle\nerdtree\nerdtree_plugin\vcs.vim
+224.000  056.000  042.000: sourcing C:\Users\Alan6\vimfiles\bundle\nerdtree\plugin\NERD_tree.vim
+227.000  003.000  003.000: sourcing C:\Users\Alan6\vimfiles\bundle\nerdcommenter\plugin\nerdcommenter.vim
+230.000  000.000  000.000: sourcing C:\Users\Alan6\vimfiles\bundle\vim-airline\autoload\airline\init.vim
+233.000  001.000  001.000: sourcing C:\Users\Alan6\vimfiles\bundle\vim-airline\autoload\airline\parts.vim
+234.000  000.000  000.000: sourcing C:\Users\Alan6\vimfiles\bundle\vim-airline\autoload\airline\formatter\short_path.vim
+238.000  000.000  000.000: sourcing C:\Users\Alan6\vimfiles\bundle\vim-airline\autoload\airline\util.vim
+238.000  010.000  009.000: sourcing C:\Users\Alan6\vimfiles\bundle\vim-airline\plugin\airline.vim
+239.000  000.000  000.000: sourcing C:\Users\Alan6\vimfiles\bundle\vim-airline-themes\plugin\airline-themes.vim
+242.000  002.000  002.000: sourcing C:\Users\Alan6\vimfiles\bundle\YouCompleteMe\plugin\youcompleteme.vim
+243.000  000.000  000.000: sourcing C:\Users\Alan6\vimfiles\bundle\calendar.vim\plugin\calendar.vim
+246.000  002.000  002.000: sourcing C:\Users\Alan6\vimfiles\bundle\tagbar\plugin\tagbar.vim
+250.000  003.000  003.000: sourcing C:\Users\Alan6\vimfiles\bundle\fzf.vim\plugin\fzf.vim
+257.000  006.000  006.000: sourcing C:\Users\Alan6\vimfiles\bundle\vim-easymotion\plugin\EasyMotion.vim
+262.000  000.000  000.000: sourcing C:\Users\Alan6\vimfiles\bundle\ultisnips\autoload\UltiSnips\map_keys.vim
+262.000  004.000  004.000: sourcing C:\Users\Alan6\vimfiles\bundle\ultisnips\plugin\UltiSnips.vim
+264.000  000.000  000.000: sourcing C:\Users\Alan6\vimfiles\bundle\vim-snippets\plugin\vimsnippets.vim
+265.000  000.000  000.000: sourcing C:\Users\Alan6\vimfiles\bundle\markdown-preview.nvim\plugin\mkdp.vim
+267.000  000.000  000.000: sourcing C:\Program Files (x86)\Vim\vim90\plugin\getscriptPlugin.vim
+268.000  001.000  001.000: sourcing C:\Program Files (x86)\Vim\vim90\plugin\gzip.vim
+269.000  001.000  001.000: sourcing C:\Program Files (x86)\Vim\vim90\plugin\logiPat.vim
+269.000  000.000  000.000: sourcing C:\Program Files (x86)\Vim\vim90\plugin\manpager.vim
+270.000  000.000  000.000: sourcing C:\Program Files (x86)\Vim\vim90\plugin\matchparen.vim
+271.000  001.000  001.000: sourcing C:\Program Files (x86)\Vim\vim90\plugin\netrwPlugin.vim
+272.000  000.000  000.000: sourcing C:\Program Files (x86)\Vim\vim90\plugin\rrhelper.vim
+273.000  001.000  001.000: sourcing C:\Program Files (x86)\Vim\vim90\plugin\spellfile.vim
+273.000  000.000  000.000: sourcing C:\Program Files (x86)\Vim\vim90\plugin\tarPlugin.vim
+274.000  000.000  000.000: sourcing C:\Program Files (x86)\Vim\vim90\plugin\tohtml.vim
+275.000  000.000  000.000: sourcing C:\Program Files (x86)\Vim\vim90\plugin\vimballPlugin.vim
+275.000  000.000  000.000: sourcing C:\Program Files (x86)\Vim\vim90\plugin\zipPlugin.vim
+276.000  022.000: loading plugins
+277.000  001.000: loading packages
+281.000  000.000  000.000: sourcing C:\Users\Alan6\vimfiles\bundle\indentLine\after\plugin\indentLine.vim
+283.000  001.000  001.000: sourcing C:\Users\Alan6\vimfiles\bundle\ultisnips\after\plugin\UltiSnips_after.vim
+283.000  005.000: loading after plugins
+283.000  000.000: inits 3
+284.000  001.000: reading viminfo
+284.000  000.000: setting raw mode
+1136.000  852.000: waiting for return
+1136.000  000.000: start termcap
+1137.000  001.000: clearing screen
+1144.000  001.000  001.000: sourcing C:\Users\Alan6\vimfiles\bundle\vim-airline\autoload\airline\extensions.vim
+1148.000  001.000  001.000: sourcing C:\Users\Alan6\vimfiles\bundle\vim-airline\autoload\airline\extensions\quickfix.vim
+1151.000  001.000  001.000: sourcing C:\Users\Alan6\vimfiles\bundle\vim-airline\autoload\airline.vim
+1153.000  000.000  000.000: sourcing C:\Users\Alan6\vimfiles\bundle\vim-airline\autoload\airline\extensions\netrw.vim
+1160.000  000.000  000.000: sourcing C:\Users\Alan6\vimfiles\bundle\vim-airline\autoload\airline\section.vim
+1162.000  001.000  001.000: sourcing C:\Users\Alan6\vimfiles\bundle\vim-airline\autoload\airline\highlighter.vim
+1162.000  004.000  003.000: sourcing C:\Users\Alan6\vimfiles\bundle\vim-airline\autoload\airline\extensions\term.vim
+1164.000  000.000  000.000: sourcing C:\Users\Alan6\vimfiles\bundle\vim-airline\autoload\airline\extensions\tagbar.vim
+1167.000  000.000  000.000: sourcing C:\Users\Alan6\vimfiles\bundle\vim-airline\autoload\airline\extensions\whitespace.vim
+1175.000  000.000  000.000: sourcing C:\Users\Alan6\vimfiles\bundle\vim-airline\autoload\airline\extensions\po.vim
+1177.000  000.000  000.000: sourcing C:\Users\Alan6\vimfiles\bundle\vim-airline\autoload\airline\extensions\wordcount.vim
+1179.000  000.000  000.000: sourcing C:\Users\Alan6\vimfiles\bundle\vim-airline\autoload\airline\extensions\keymap.vim
+1188.000  000.000  000.000: sourcing C:\Users\Alan6\vimfiles\bundle\vim-airline\autoload\airline\extensions\searchcount.vim
+1244.000  000.000  000.000: sourcing C:\Users\Alan6\vimfiles\bundle\vim-airline\autoload\airline\themes.vim
+1244.000  002.000  002.000: sourcing C:\Users\Alan6\vimfiles\bundle\vim-airline\autoload\airline\themes\dark.vim
+1269.000  001.000  001.000: sourcing C:\Users\Alan6\vimfiles\bundle\vim-airline\autoload\airline\builder.vim
+1271.000  000.000  000.000: sourcing C:\Users\Alan6\vimfiles\bundle\vim-airline\autoload\airline\extensions\default.vim
+1287.000  140.000: opening buffers
+1289.000  002.000: BufEnter autocommands
+1289.000  000.000: editing files in windows
+1333.000  000.000  000.000: sourcing C:\Users\Alan6\vimfiles\bundle\nerdtree\syntax\nerdtree.vim
+1568.000  002.000  002.000: sourcing C:\Users\Alan6\vimfiles\bundle\YouCompleteMe\autoload\youcompleteme.vim
+1759.000  468.000: VimEnter autocommands
+1759.000  000.000: before starting main loop
+1792.000  033.000: first screen update
+1792.000  000.000: --- VIM STARTED ---
